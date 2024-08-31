@@ -1,0 +1,8 @@
+"Before running the project, it is necessary to run npm install; otherwise, the project will not run."
+
+Package install in this code:
+
+1 => npm i react-toastify
+
+https://web3forms.com/
+

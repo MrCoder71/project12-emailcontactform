@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.contactform {
+    padding-bottom: 7rem;
+}
+
+.contactform .heading {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.contactform .heading span {
+    color: var(--main-color);
+}
+
+.contactform form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contactform .contactform-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contactform .contactform-field {
+    position: relative;
+    width: 48%;
+    margin: 0.8rem 0;
+    transition: all 0.3s ease;
+
+}
+
+.contactform .contactform-field input,
+.contactform .messagebox-field textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    transition: all 0.3s ease;
+
+}
+
+.contactform .contactform-field input::placeholder,
+.contactform .messagebox-field textarea::placeholder {
+    color: var(--text-color);
+}
+
+.contactform .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 5px;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: width 0.5s ease;
+}
+
+.contactform .contactform-field input:focus~.focus,
+.contactform .contactform-field input:valid~.focus,
+.contactform .messagebox-field textarea:focus~.focus,
+.contactform .messagebox-field textarea:valid~.focus {
+    width: 100%;
+}
+
+
+.contactform .messagebox-field {
+    margin: 0.8rem 0 2.7rem;
+    display: flex;
+    position: relative;
+}
+
+.contactform .messagebox-field textarea {
+    resize: none;
+}
+
+.button-box button {
+    cursor: pointer;
+    border: 2px solid var(--main-color);
+    font-size: 3rem;
+    border-radius: 10px;
+    width: 50%;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+
+/* Responsive Web Design */
+
+@media (max-width: 750px) {
+    .contactform form {
+        padding: 1.5rem;
+    }
+
+    .contactform .contactform-box {
+      
+        gap: 1rem;
+    }
+
+    .contactform .contactform-field {
+        width: 100%;
+    }
+
+    .contactform .messagebox-field {
+        width: 100%;
+    }
+}
